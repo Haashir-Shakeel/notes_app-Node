@@ -38,9 +38,14 @@ const loadNotes = function(){
     }catch(e){
         return []    //returning empty array if notes.json doesnot exist
     }
-    
+
+}
+
+const removeNotes = function(title){
+    console.log("Removed Note: ", title)
 }
 module.exports = {
     getnotes: getnotes,
     addNote: addNote,
+    removeNotes: removeNotes,
 }
