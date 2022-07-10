@@ -1,1 +1,0 @@
-hello this is notes app, this was created using node
