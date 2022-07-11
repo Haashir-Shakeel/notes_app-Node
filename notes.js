@@ -8,9 +8,11 @@ const getnotes = () => {
 const addNote = (title,body) => {
     const notes = loadNotes()           //loading our notes array/file
 
-    const duplicateNotes = notes.filter((note)=>note.title === title)   //to check if duplicate note exists
+    // const duplicateNotes = notes.filter((note)=>note.title === title)   //to check if duplicate note exists
+   
+    const duplicateNote = notes.find((note)=>note.title === title) //to check if duplicate note exists
 
-    if (duplicateNotes.length === 0 ){
+    if (!duplicateNote){
         notes.push({                    //adding new note to array/file
             title:title,
             body:body
